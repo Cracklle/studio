@@ -81,30 +81,36 @@ export default function Home() {
             </p>
           </div>
           <div className="mx-auto mt-16 grid max-w-none grid-cols-1 gap-8 md:grid-cols-3 lg:max-w-5xl">
-            <Card className="flex flex-col hover:shadow-xl transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-center text-2xl">Basic</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow text-center">
-                <p className="text-muted-foreground">Get started and establish your digital presence.</p>
-              </CardContent>
-            </Card>
-            <Card className="flex flex-col border-primary shadow-lg ring-2 ring-primary hover:shadow-2xl transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-center text-2xl">Standard</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow text-center">
-                <p className="text-muted-foreground">Unlock more features to grow your reach.</p>
-              </CardContent>
-            </Card>
-            <Card className="flex flex-col hover:shadow-xl transition-shadow">
-              <CardHeader>
-                <CardTitle className="text-center text-2xl">Premium</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow text-center">
-                <p className="text-muted-foreground">Full access to all tools for maximum impact.</p>
-              </CardContent>
-            </Card>
+            <Link href="/basic" className="flex">
+              <Card className="flex flex-col hover:shadow-xl transition-shadow w-full">
+                <CardHeader>
+                  <CardTitle className="text-center text-2xl">Basic</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow text-center">
+                  <p className="text-muted-foreground">Get started and establish your digital presence.</p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/standard" className="flex">
+              <Card className="flex flex-col border-primary shadow-lg ring-2 ring-primary hover:shadow-2xl transition-shadow w-full">
+                <CardHeader>
+                  <CardTitle className="text-center text-2xl">Standard</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow text-center">
+                  <p className="text-muted-foreground">Unlock more features to grow your reach.</p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/premium" className="flex">
+              <Card className="flex flex-col hover:shadow-xl transition-shadow w-full">
+                <CardHeader>
+                  <CardTitle className="text-center text-2xl">Premium</CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow text-center">
+                  <p className="text-muted-foreground">Full access to all tools for maximum impact.</p>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>
