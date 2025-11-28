@@ -46,10 +46,10 @@ export function Navbar() {
             </div>
           </div>
         <div className="flex items-center justify-end space-x-2">
-          <Button asChild className="hidden md:inline-flex">
+          <Button asChild className="hidden md:inline-flex rounded-full">
             <Link href="#">Register NGO</Link>
           </Button>
-          <Button asChild className="hidden md:inline-flex" variant="ghost">
+          <Button asChild className="hidden md:inline-flex rounded-full" variant="outline">
             <Link href="#">Log In</Link>
           </Button>
           <Sheet>
@@ -64,8 +64,8 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
-              <SheetHeader>
-                <SheetTitle className="sr-only">Menu</SheetTitle>
+              <SheetHeader className="sr-only">
+                <SheetTitle>Menu</SheetTitle>
               </SheetHeader>
               <Link href="/" className="mb-8 flex items-center">
                 <span className="font-bold text-primary">NGO Connect</span>

@@ -3,7 +3,7 @@ import { Facebook, Twitter, Linkedin, Mountain } from 'lucide-react';
 
 export function Footer() {
   return (
-    <footer id="contact" className="bg-foreground text-background scroll-mt-20">
+    <footer id="contact" className="bg-[#0D1B2A] text-background scroll-mt-20">
       <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div className="md:col-span-1">
