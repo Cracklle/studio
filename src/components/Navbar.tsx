@@ -4,7 +4,8 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
+import { Menu, Search } from 'lucide-react';
+import { Input } from '@/components/ui/input';
 
 export function Navbar() {
   const navLinks = [
@@ -15,7 +16,7 @@ export function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b bg-background backdrop-blur-md">
       <div className="container flex h-16 max-w-screen-xl items-center">
         <div className="mr-4 flex">
           <Link href="/" className="flex items-center">
@@ -35,7 +36,19 @@ export function Navbar() {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end space-x-4">
+        <div className="flex flex-1 items-center justify-center hidden md:flex px-8">
+            <div className="relative w-full max-w-md">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Input
+                placeholder="Search for NGOs, projects..."
+                className="pl-9"
+              />
+            </div>
+          </div>
+        <div className="flex items-center justify-end space-x-2">
+          <Button asChild className="hidden md:inline-flex" variant="ghost">
+            <Link href="#">Log In</Link>
+          </Button>
           <Button asChild className="hidden md:inline-flex">
             <Link href="#">Register NGO</Link>
           </Button>
@@ -68,9 +81,14 @@ export function Navbar() {
                   </Link>
                 ))}
               </div>
-              <Button asChild className="mt-8 w-full">
-                <Link href="#">Register NGO</Link>
-              </Button>
+              <div className="mt-8 flex flex-col space-y-2">
+                <Button asChild className="w-full">
+                  <Link href="#">Register NGO</Link>
+                </Button>
+                <Button asChild className="w-full" variant="outline">
+                  <Link href="#">Log In</Link>
+                </Button>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
