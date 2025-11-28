@@ -12,7 +12,7 @@ export default function Home() {
     {
       name: 'Basic',
       href: '/basic',
-      price: 'Free',
+      price: 'MK 580,000',
       description: 'Get started and establish your digital presence.',
       features: [
         'Public Profile Page',
@@ -25,7 +25,7 @@ export default function Home() {
     {
       name: 'Standard',
       href: '/standard',
-      price: '$25/mo',
+      price: 'MK 870,000',
       description: 'Unlock more features to grow your reach and funding.',
       features: [
         'Everything in Basic',
@@ -40,7 +40,7 @@ export default function Home() {
     {
       name: 'Premium',
       href: '/premium',
-      price: '$50/mo',
+      price: 'MK 1,305,000',
       description: 'Full access to all tools for maximum impact and visibility.',
       features: [
         'Everything in Standard',
