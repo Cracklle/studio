@@ -49,7 +49,7 @@ export function Navbar() {
           <Button asChild className="hidden md:inline-flex rounded-full">
             <Link href="#">Register NGO</Link>
           </Button>
-          <Button asChild className="hidden md:inline-flex rounded-full" variant="outline">
+          <Button asChild className="hidden md:inline-flex rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" variant="outline">
             <Link href="#">Log In</Link>
           </Button>
           <Sheet>
@@ -64,8 +64,8 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
-              <SheetHeader className="sr-only">
-                <SheetTitle>Menu</SheetTitle>
+              <SheetHeader>
+                <SheetTitle className="sr-only">Menu</SheetTitle>
               </SheetHeader>
               <Link href="/" className="mb-8 flex items-center">
                 <span className="font-bold text-primary">NGO Connect</span>
