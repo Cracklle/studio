@@ -16,7 +16,7 @@ export function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm">
       <div className="container flex h-16 max-w-screen-xl items-center">
         <div className="mr-4 flex">
           <Link href="/" className="flex items-center">
@@ -41,16 +41,16 @@ export function Navbar() {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 placeholder="Search for NGOs, projects..."
-                className="pl-9"
+                className="pl-9 rounded-full"
               />
             </div>
           </div>
         <div className="flex items-center justify-end space-x-2">
-          <Button asChild className="hidden md:inline-flex" variant="ghost">
-            <Link href="#">Log In</Link>
-          </Button>
           <Button asChild className="hidden md:inline-flex">
             <Link href="#">Register NGO</Link>
+          </Button>
+          <Button asChild className="hidden md:inline-flex" variant="ghost">
+            <Link href="#">Log In</Link>
           </Button>
           <Sheet>
             <SheetTrigger asChild>
