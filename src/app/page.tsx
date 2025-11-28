@@ -57,20 +57,20 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-background">
+      <section className="bg-primary text-primary-foreground">
         <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 py-20 md:grid-cols-2 lg:py-28">
           <div className="text-center md:text-left">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl font-headline">
+            <h1 className="text-4xl font-bold tracking-tight text-primary-foreground sm:text-5xl md:text-6xl font-headline">
               Connecting Malawi’s NGOs for Impact and Sustainability.
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground md:mx-0">
+            <p className="mx-auto mt-6 max-w-2xl text-lg text-primary-foreground/80 md:mx-0">
               The national digital hub for donor engagement and resource mobilization.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 md:justify-start">
-              <Button asChild size="lg">
+              <Button asChild size="lg" variant="secondary">
                 <Link href="#">Get Verified</Link>
               </Button>
-              <Button asChild variant="outline" size="lg">
+              <Button asChild variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
                 <Link href="#about">Learn More</Link>
               </Button>
             </div>
