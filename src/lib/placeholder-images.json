@@ -1,3 +1,10 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-image-1",
+      "description": "A group of smiling children in a classroom in Malawi, raising their hands.",
+      "imageUrl": "https://images.unsplash.com/photo-1615669221955-f6e6c0a30505?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxNYWxhd2klMjBjaGlsZHJlbnxlbnwwfHx8fDE3NjQzMDk1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "Malawi children"
+    }
+  ]
 }
