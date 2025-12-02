@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-slate-50">
+      <section className="bg-[#B2FFFF]">
         <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 py-20 md:grid-cols-2 lg:py-28">
           <div className="text-center md:text-left">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl font-headline">

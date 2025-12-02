@@ -49,7 +49,7 @@ export default function BasicPage() {
   return (
     <div className="bg-background">
       {/* Hero Section */}
-      <section className="bg-slate-50 py-20 sm:py-24">
+      <section className="bg-[#B2FFFF] py-20 sm:py-24">
         <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 md:grid-cols-2">
           <div className="text-center md:text-left">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl font-headline">
@@ -140,7 +140,7 @@ export default function BasicPage() {
       </section>
       
       {/* Video Placeholder Section */}
-      <section className="py-20 sm:py-24">
+      <section className="bg-[#B2FFFF] py-20 sm:py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">
