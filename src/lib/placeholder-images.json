@@ -5,6 +5,12 @@
       "description": "A group of smiling children in a classroom in Malawi, raising their hands.",
       "imageUrl": "https://images.unsplash.com/photo-1615669221955-f6e6c0a30505?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxNYWxhd2klMjBjaGlsZHJlbnxlbnwwfHx8fDE3NjQzMDk1NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "Malawi children"
+    },
+    {
+      "id": "basic-page-hero",
+      "description": "A person working on a laptop in a modern, clean office space, representing professionalism and digital work.",
+      "imageUrl": "https://images.unsplash.com/photo-1722159475082-0a2331580de3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjB3b3Jrc3BhY2V8ZW58MHx8fHwxNzY0NjAxMTA1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional workspace"
     }
   ]
 }

@@ -1,9 +1,14 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, FileText, Users, Phone, Share2, Server, Globe, BarChart2, Mail } from 'lucide-react';
+import { FileText, Share2, Server, Globe, BarChart2, Mail } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function BasicPage() {
+  const pageImage = PlaceHolderImages.find(p => p.id === 'basic-page-hero');
+
   const features = [
     {
       title: '5 Core Pages',
@@ -45,21 +50,34 @@ export default function BasicPage() {
     <div className="bg-background">
       {/* Hero Section */}
       <section className="bg-slate-50 py-20 sm:py-24">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl font-headline">
-            Basic Package (Static)
-          </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-2xl font-bold text-primary">
-            MWK 580,000
-          </p>
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
-            The perfect starting point for NGOs looking to get online quickly and professionally. This package includes all the essential elements required to establish credibility and begin your digital journey.
-          </p>
-          <div className="mt-10">
-            <Button asChild size="lg">
-              <Link href="#contact">Get Started Today</Link>
-            </Button>
+        <div className="container mx-auto grid grid-cols-1 items-center gap-12 px-4 md:grid-cols-2">
+          <div className="text-center md:text-left">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl font-headline">
+              Basic Package
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-2xl font-bold text-primary">
+              MWK 580,000
+            </p>
+            <p className="mx-auto mt-4 max-w-3xl text-lg text-muted-foreground">
+              The perfect starting point for NGOs looking to get online quickly and professionally. This package includes all the essential elements required to establish credibility and begin your digital journey.
+            </p>
+            <div className="mt-10">
+              <Button asChild size="lg">
+                <Link href="#contact">Get Started Today</Link>
+              </Button>
+            </div>
           </div>
+          {pageImage && (
+             <div className="relative h-80 w-full rounded-lg shadow-xl">
+                <Image
+                src={pageImage.imageUrl}
+                alt={pageImage.description}
+                fill
+                className="rounded-lg object-cover"
+                data-ai-hint={pageImage.imageHint}
+                />
+            </div>
+          )}
         </div>
       </section>
 
@@ -76,8 +94,8 @@ export default function BasicPage() {
           </div>
           <div className="mx-auto mt-16 grid max-w-none grid-cols-1 gap-8 md:grid-cols-2 lg:max-w-4xl">
             {features.map((feature) => (
-              <Card key={feature.title} className="flex flex-col items-center p-6 text-center transition-shadow hover:shadow-lg">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground">
+              <Card key={feature.title} className="flex flex-col items-center p-6 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-primary-foreground mb-4">
                   {feature.icon}
                 </div>
                 <CardHeader>
@@ -105,7 +123,7 @@ export default function BasicPage() {
           </div>
           <div className="mx-auto mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {technicalSpecs.map((spec) => (
-               <Card key={spec.title} className="flex flex-col items-center p-6 text-center transition-shadow hover:shadow-lg">
+               <Card key={spec.title} className="flex flex-col items-center p-6 text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
                  {spec.icon}
                </div>
