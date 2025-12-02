@@ -4,15 +4,32 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Search } from 'lucide-react';
+import { Menu, Search, ChevronDown } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 export function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/#about", label: "About" },
-    { href: "/#packages", label: "Packages" },
     { href: "/#contact", label: "Contact" },
+  ];
+
+  const packageLinks = [
+    { href: "/basic", label: "Basic" },
+    { href: "/standard", label: "Standard" },
+    { href: "/premium", label: "Premium" },
   ];
 
   return (
@@ -35,6 +52,18 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
+           <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 text-foreground/60 transition-colors hover:text-foreground/80 focus:outline-none">
+              Packages <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              {packageLinks.map((link) => (
+                <DropdownMenuItem key={link.label} asChild>
+                  <Link href={link.href}>{link.label}</Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
         </nav>
         <div className="flex flex-1 items-center justify-center hidden md:flex px-8">
             <div className="relative w-full max-w-md">
@@ -80,6 +109,26 @@ export function Navbar() {
                     {link.label}
                   </Link>
                 ))}
+                 <Accordion type="single" collapsible className="w-full">
+                  <AccordionItem value="item-1" className="border-b-0">
+                    <AccordionTrigger className="py-0 text-foreground/80 transition-colors hover:text-foreground hover:no-underline">
+                      Packages
+                    </AccordionTrigger>
+                    <AccordionContent className="pt-2">
+                      <div className="flex flex-col space-y-2 pl-4">
+                        {packageLinks.map((link) => (
+                          <Link
+                            key={link.label}
+                            href={link.href}
+                            className="text-foreground/70 transition-colors hover:text-foreground"
+                          >
+                            {link.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </div>
               <div className="mt-8 flex flex-col space-y-2">
                 <Button asChild className="w-full">
