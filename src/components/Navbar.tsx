@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from 'next/link';
@@ -18,6 +17,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 
 export function Navbar() {
   const navLinks = [
@@ -47,13 +47,13 @@ export function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-foreground/60 transition-colors hover:text-foreground/80"
+              className="text-foreground/60 transition-colors hover:text-primary"
             >
               {link.label}
             </Link>
           ))}
            <DropdownMenu>
-            <DropdownMenuTrigger className="flex items-center gap-1 text-foreground/60 transition-colors hover:text-foreground/80 focus:outline-none">
+            <DropdownMenuTrigger className="flex items-center gap-1 text-foreground/60 transition-colors hover:text-primary focus:outline-none">
               Packages <ChevronDown className="h-4 w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -93,9 +93,11 @@ export function Navbar() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
-              <SheetHeader>
-                <SheetTitle className="sr-only">Menu</SheetTitle>
-              </SheetHeader>
+                <SheetHeader>
+                    <SheetTitle>
+                        <VisuallyHidden>Mobile Menu</VisuallyHidden>
+                    </SheetTitle>
+                </SheetHeader>
               <Link href="/" className="mb-8 flex items-center">
                 <span className="font-bold text-primary">NGO Connect</span>
               </Link>
@@ -104,14 +106,14 @@ export function Navbar() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="text-foreground/80 transition-colors hover:text-foreground"
+                    className="text-foreground/80 transition-colors hover:text-primary"
                   >
                     {link.label}
                   </Link>
                 ))}
                  <Accordion type="single" collapsible className="w-full">
                   <AccordionItem value="item-1" className="border-b-0">
-                    <AccordionTrigger className="py-0 text-foreground/80 transition-colors hover:text-foreground hover:no-underline">
+                    <AccordionTrigger className="py-0 text-foreground/80 transition-colors hover:text-primary hover:no-underline">
                       Packages
                     </AccordionTrigger>
                     <AccordionContent className="pt-2">
@@ -120,7 +122,7 @@ export function Navbar() {
                           <Link
                             key={link.label}
                             href={link.href}
-                            className="text-foreground/70 transition-colors hover:text-foreground"
+                            className="text-foreground/70 transition-colors hover:text-primary"
                           >
                             {link.label}
                           </Link>
