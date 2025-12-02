@@ -1,7 +1,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { FileText, Share2, Server, Globe, BarChart2, Mail } from 'lucide-react';
+import { FileText, Share2, Server, Globe, BarChart2, Mail, Play } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -135,6 +135,36 @@ export default function BasicPage() {
                </CardContent>
              </Card>
             ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Video Placeholder Section */}
+      <section className="py-20 sm:py-24">
+        <div className="container mx-auto px-4">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl font-headline">
+              Getting Started Made Easy
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Watch our short video guide to see how simple it is to set up your NGO profile, customize your theme, and manage your content through our intuitive dashboard.
+            </p>
+          </div>
+          <div className="mx-auto mt-12 max-w-4xl">
+            <div className="relative aspect-video w-full rounded-lg shadow-xl group cursor-pointer">
+              <Image
+                src="https://picsum.photos/seed/ngo-video/1280/720"
+                alt="Video placeholder showing how to get started with the dashboard"
+                fill
+                className="rounded-lg object-cover"
+                data-ai-hint="dashboard tutorial"
+              />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/40 rounded-lg">
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary/80 text-primary-foreground transition-transform group-hover:scale-110">
+                  <Play className="h-10 w-10 ml-1" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
